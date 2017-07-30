@@ -15,6 +15,12 @@ import com.org.dm.CubeSummationDTO;
 @Local
 public interface CubeSummationWS {
 
+	/**
+	 * Calcula la suma por cada bloque ingresado
+	 * @param cubeSummationDTO
+	 * @return CubeSummationDTO
+	 * @throws BusinessException
+	 */
 	@WebMethod
 	CubeSummationDTO calcularSumaBloque(@WebParam(name = "cubeSummationDTO") CubeSummationDTO cubeSummationDTO) throws BusinessException;
     	

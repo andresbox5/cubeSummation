@@ -18,6 +18,9 @@ public class CubeSummationWSImpl implements CubeSummationWS {
 	@EJB
 	private CubeSummationBO cubeSummationBO;
 
+	/**
+	 * Consume la capacidad calcularSumaBloque de cubeSummationBO
+	 */
 	@Override
 	public CubeSummationDTO calcularSumaBloque(CubeSummationDTO cubeSummationDTO) throws BusinessException {		
 		return cubeSummationBO.calcularSumaBloque(cubeSummationDTO);		

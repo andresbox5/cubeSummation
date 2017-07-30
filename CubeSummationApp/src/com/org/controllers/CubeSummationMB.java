@@ -62,11 +62,13 @@ public class CubeSummationMB implements Serializable {
 	private boolean habilitaTipoOperacion;
 	private int casoPrueba;
 	private String tipoOperacion;
-	public String informacionEntrada;
-	
+	public String informacionEntrada;	
 	private static final String QUERY = "QUERY";
 	private static final String UPDATE = "UPDATE";
 	
+	/**
+	 * Inicializa variables y crea cliente consumidor del servicio web
+	 */
 	@PostConstruct
 	public void init() {
 		inicializarVariables();
@@ -99,6 +101,9 @@ public class CubeSummationMB implements Serializable {
 		listaOperaciones = new ArrayList<>();		
 	}
 	
+	/**
+	 * Valida si se debe habilitar el campo de obtención de la dimensión de la matriz en la vista
+	 */
 	public void habilitarPrueba(){
 		for1: for(Integer prueba : listaCasosPrueba){
 			if(prueba == casoPrueba){
@@ -110,6 +115,9 @@ public class CubeSummationMB implements Serializable {
 		}
 	}
 	
+	/**
+	 * Valida si se cumple con el criterio 1 <= T <= 50 
+	 */
 	public void validarNumeroCasosPrueba(){
 		if( numeroCasosPrueba >= 1 && numeroCasosPrueba <= 50 ){
 			if(numeroCasosPrueba != 0 ){
@@ -131,6 +139,9 @@ public class CubeSummationMB implements Serializable {
 		
 	}
 	
+	/**
+	 * Determina si se debe habilitar los campos de UPDATE o QUERY
+	 */
 	public void validarTipoOperacion() {
 		if (tipoOperacion != null && tipoOperacion.equalsIgnoreCase(UPDATE)) {
 			habilitarUpdate = true;
@@ -146,6 +157,9 @@ public class CubeSummationMB implements Serializable {
 		}
 	}
 	
+	/**
+	 * Invoca la capacidad calcularSumaBloque del servicio web CubeSummationWS
+	 */
 	public void obtenerResultado(){
 		habilitarRespuestaCasoPrueba = true;		
 		try {
@@ -157,6 +171,10 @@ public class CubeSummationMB implements Serializable {
 		}
 	}
 	
+	/**
+	 * Guarda temporalmente la dimension de la matriz y de todas las operaciones del caso de prueba
+	 * en particular
+	 */
 	public void guardarCasoPrueba(){
 		Operacion[] arrayOperacion = new Operacion[listaOperaciones.size()];
 		arrayOperacion = listaOperaciones.toArray(arrayOperacion);
@@ -180,6 +198,15 @@ public class CubeSummationMB implements Serializable {
 		habilitaTipoOperacion = false;
 	}
 	
+	/**
+	 * valida que se cumplan los siguientes criterios:
+	 * 	1 <= x1 <= x2 <= N 
+		1 <= y1 <= y2 <= N 
+		1 <= z1 <= z2 <= N 
+		1 <= x,y,z <= N 
+		-109 <= W <= 109
+	 * @return
+	 */
 	public boolean validarValoresEntrada(){
 		StringBuilder mensaje = new StringBuilder();
 		boolean emitirMensaje = false;
@@ -250,6 +277,9 @@ public class CubeSummationMB implements Serializable {
 		return !emitirMensaje;
 	}
 	
+	/**
+	 * Guarda temporalmente la información de las operacion ejecutadas 
+	 */
 	public void guardarOperacion() {
 		try {
 			if (validarValoresEntrada()) {
@@ -305,6 +335,9 @@ public class CubeSummationMB implements Serializable {
 		}
 	}
 
+	/**
+	 * Valida que se cumpla el criterio 1 <= N <= 100  para la dimensión de la matriz
+	 */
 	public void validarDimension(){
 		if( !(cubeSummationDTO.getDimensionMatriz() >= 1 && cubeSummationDTO.getDimensionMatriz() <= 100) ){
 			Util.lanzaMensajeWarn("la dimensión de la matriz debe cumplir con el siguiente criterio (1 <= N <= 100)");
@@ -315,6 +348,10 @@ public class CubeSummationMB implements Serializable {
 		}
 	}
 	
+	/**
+	 * Valida que se cumpla el criterio 1 <= M <= 1000 para obtener la cantidad de operaciones a ejecutar en un 
+	 * caso de prueba en particular
+	 */
 	public void validarCantidadOperaciones(){
 
 		if( !(cubeSummationDTO.getNumeroOperaciones() >= 1 && cubeSummationDTO.getNumeroOperaciones() <= 1000) ){
@@ -328,6 +365,10 @@ public class CubeSummationMB implements Serializable {
 		}
 	}
 	
+	/**
+	 * Inicializa variables para brindar al usuario la oportunidad
+	 * de realiza un nuevo proceso
+	 */
 	public void limpiar(){
 		inicializarVariables();
 		habilitaCantidadOperaciones = false;
@@ -337,6 +378,8 @@ public class CubeSummationMB implements Serializable {
 		habilitarCasosPrueba = true;
 		habilitarObtenerResultado = false;
 	}
+	
+	// getter's y setter's
 	
 	public int getNumeroCasosPrueba() {
 		return numeroCasosPrueba;

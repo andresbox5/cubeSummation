@@ -12,6 +12,10 @@ public class CubeSummationDaoImpl implements CubeSummationDAO {
 	private static final String QUERY = "QUERY";
 	private static final String UPDATE = "UPDATE";
 
+	/**
+	 * Realiza cada una de las operaciones brindadas para cada caso de prueba en particular
+	 * y arma la respuesta a ser presentada al usuario
+	 */
 	@Override
 	public CubeSummationDTO calcularSumaBloque(CubeSummationDTO cubeSummationDTO) throws DAOException {
 		StringBuilder salida = new StringBuilder();

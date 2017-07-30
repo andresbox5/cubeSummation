@@ -15,6 +15,9 @@ public class CubeSummationBOEJB implements CubeSummationBO {
 	@Inject
 	private CubeSummationDAO cubeSummationDAO;
 
+	/**
+	 * Consume la capacidad calcularSumaBloque de cubeSummationDAO
+	 */
 	@Override
 	public CubeSummationDTO calcularSumaBloque(CubeSummationDTO cubeSummationDTO) throws BusinessException {
 		try {
