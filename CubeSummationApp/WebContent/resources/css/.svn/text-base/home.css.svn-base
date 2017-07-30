@@ -1,0 +1,167 @@
+*[visible='false'] {
+	display: none;
+}
+
+#body {
+	min-height: 93%;
+}
+
+.titulo_principal,#menu_usuario {
+	display: none
+}
+
+.dendrita_menu {
+	height: 521px;
+	margin: auto;
+	width: 521px;
+	background-position: center center;
+	background-repeat: no-repeat;
+}
+
+.dendrita_menu a,.dendrita_menu a:hover,.dendrita_menu_items a,.dendrita_menu_items a:hover
+	{
+	text-decoration: none;
+	color: #1C5582;
+}
+
+.left_content {
+	padding: 0px;
+	box-shadow: none;
+	background: none;
+	border: none;
+}
+
+.dendrita_item {
+	min-height: 60px;
+	min-width: 60px;
+	position: absolute;
+}
+
+.dendrita_item img {
+	min-height: 60px;
+	min-width: 60px;
+	max-height: 60px;
+	max-width: 60px;
+}
+
+.dendrita_item div {
+	border-radius: 4px;
+	font-family: "OpenSansSemiBold";
+	font-size: 12px;
+	text-align: center;
+	background-color: rgba(255, 255, 255, 0.5);
+	margin-left: -30px;
+	position: relative;
+	width: 120px; /*
+
+	margin-top: 64px;
+	*/
+}
+
+.dendrita_menu .dendrita_item:nth-child(1) {
+	margin-left: 296px;
+	margin-top: 60px;
+}
+
+.dendrita_menu .dendrita_item:nth-child(2) {
+	margin-left: 400px;
+	margin-top: 160px;
+}
+
+.dendrita_menu .dendrita_item:nth-child(3) {
+	margin-left: 400px;
+	margin-top: 295px;
+}
+
+.dendrita_menu .dendrita_item:nth-child(4) {
+	margin-left: 296px;
+	margin-top: 395px;
+}
+
+.dendrita_menu .dendrita_item:nth-child(5) {
+	margin-left: 165px;
+	margin-top: 395px;
+}
+
+.dendrita_menu .dendrita_item:nth-child(6) {
+	margin-left: 65px;
+	margin-top: 295px;
+}
+
+.dendrita_menu .dendrita_item:nth-child(7) {
+	margin-left: 65px;
+	margin-top: 160px;
+}
+
+.dendrita_menu .dendrita_item:nth-child(8) {
+	margin-left: 165px;
+	margin-top: 60px;
+}
+
+/*HIJOS*/
+.dendrita_menu_items {
+	left: 80%;
+	position: absolute;
+	top: 40px;
+	padding: 8px;
+	background-color: #fff;
+	border-radius: 4px;
+	min-width: 65px;
+	overflow: hidden;
+}
+
+.dendrita_menu_item div {
+	position: absolute;
+	left: -98px;
+	margin-top: -40px;
+	width: 100px;
+	text-align: center;
+	border-radius: 4px;
+}
+
+.dendrita_menu_items img {
+	min-height: 60px;
+	min-width: 60px;
+	max-height: 65px;
+	max-width: 65px;
+	width: 60px;
+	height: 60px;
+}
+
+/*aparece el texto*/
+.dendrita_menu_items div:hover div {
+	opacity: 1;
+}
+/*crese la imagen*/
+.item-menu-hijo:hover img {
+	width: 64px;
+	height: 64px
+}
+
+.dendrita_menu_item div {
+	opacity: 0;
+}
+
+.dendrita_menu_items:hover {
+	overflow: visible;
+}
+
+.dendrita_menu_items div {
+	background-color: rgba(255, 255, 255, 0.9);
+	font-family: "OpenSansSemiBold";
+	font-size: 12px;
+}
+
+.item-menu-hijo {
+	min-width: 60px;
+	min-height: 60px;
+	max-width: 60px;
+}
+
+/*------------------ANIMACION DE MENUS-------------------*/
+.dendrita_menu_items {
+	-moz-animation: mymove 400ms 1;
+	-webkit-animation: mymove 400ms 1;
+	-o-animation: mymove 400ms 1;
+	animation: mymove 400ms 1;
+}

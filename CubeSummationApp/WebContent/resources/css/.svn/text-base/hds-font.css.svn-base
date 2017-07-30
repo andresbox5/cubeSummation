@@ -1,0 +1,228 @@
+@font-face {
+	font-family: 'OpenSansSemiBoldItalic';
+	src:
+		url('hds-theme/fuentes/open_sans/opensans-semibolditalic-webfont.eot');
+	src:
+		url('hds-theme/fuentes/open_sans/opensans-semibolditalic-webfont.eot?#iefix')
+		format('embedded-opentype'),
+		url('hds-theme/fuentes/open_sans/opensans-semibolditalic-webfont.woff')
+		format('woff'),
+		url('hds-theme/fuentes/open_sans/opensans-semibolditalic-webfont.ttf')
+		format('truetype'),
+		url('hds-theme/fuentes/open_sans/opensans-semibolditalic-webfont.svg#open_sans_semibolditalic')
+		format('svg');
+}
+
+@font-face {
+	font-family: 'OpenSansLightItalic';
+	src: url('hds-theme/fuentes/open_sans/opensans-lightitalic-webfont.eot');
+	src:
+		url('hds-theme/fuentes/open_sans/opensans-lightitalic-webfont.eot?#iefix')
+		format('embedded-opentype'),
+		url('hds-theme/fuentes/open_sans/opensans-lightitalic-webfont.woff')
+		format('woff'),
+		url('hds-theme/fuentes/open_sans/opensans-lightitalic-webfont.ttf')
+		format('truetype'),
+		url('hds-theme/fuentes/open_sans/opensans-lightitalic-webfont.svg#open_sans_lightitalic')
+		format('svg');
+}
+
+@font-face {
+	font-family: 'OpenSansLight';
+	src: url('hds-theme/fuentes/open_sans/opensans-light-webfont.eot');
+	src:
+		url('hds-theme/fuentes/open_sans/opensans-light-webfont.eot?#iefix')
+		format('embedded-opentype'),
+		url('hds-theme/fuentes/open_sans/opensans-light-webfont.woff')
+		format('woff'),
+		url('hds-theme/fuentes/open_sans/opensans-light-webfont.ttf')
+		format('truetype'),
+		url('hds-theme/fuentes/open_sans/opensans-light-webfont.svg#open_sans_lightregular')
+		format('svg');
+}
+
+@font-face {
+	font-family: 'OpenSansItalic';
+	src: url('hds-theme/fuentes/open_sans/opensans-italic-webfont.eot');
+	src:
+		url('hds-theme/fuentes/open_sans/opensans-italic-webfont.eot?#iefix')
+		format('embedded-opentype'),
+		url('hds-theme/fuentes/open_sans/opensans-italic-webfont.woff')
+		format('woff'),
+		url('hds-theme/fuentes/open_sans/opensans-italic-webfont.ttf')
+		format('truetype'),
+		url('hds-theme/fuentes/open_sans/opensans-italic-webfont.svg#open_sansitalic')
+		format('svg');
+}
+
+@font-face {
+	font-family: 'OpenSansExtraboldItalic';
+	src:
+		url('hds-theme/fuentes/open_sans/opensans-extrabolditalic-webfont.eot');
+	src:
+		url('hds-theme/fuentes/open_sans/opensans-extrabolditalic-webfont.eot?#iefix')
+		format('embedded-opentype'),
+		url('hds-theme/fuentes/open_sans/opensans-extrabolditalic-webfont.woff')
+		format('woff'),
+		url('hds-theme/fuentes/open_sans/opensans-extrabolditalic-webfont.ttf')
+		format('truetype'),
+		url('hds-theme/fuentes/open_sans/opensans-extrabolditalic-webfont.svg#open_sans_extrabolditalic')
+		format('svg');
+}
+
+@font-face {
+	font-family: 'OpenSansExtraBold';
+	src: url('hds-theme/fuentes/open_sans/opensans-extrabold-webfont.eot');
+	src:
+		url('hds-theme/fuentes/open_sans/opensans-extrabold-webfont.eot?#iefix')
+		format('embedded-opentype'),
+		url('hds-theme/fuentes/open_sans/opensans-extrabold-webfont.woff')
+		format('woff'),
+		url('hds-theme/fuentes/open_sans/opensans-extrabold-webfont.ttf')
+		format('truetype'),
+		url('hds-theme/fuentes/open_sans/opensans-extrabold-webfont.svg#open_sans_extraboldregular')
+		format('svg');
+}
+
+@font-face {
+	font-family: 'OpenSansBoldItalic';
+	src: url('hds-theme/fuentes/open_sans/opensans-bolditalic-webfont.eot');
+	src:
+		url('hds-theme/fuentes/open_sans/opensans-bolditalic-webfont.eot?#iefix')
+		format('embedded-opentype'),
+		url('hds-theme/fuentes/open_sans/opensans-bolditalic-webfont.woff')
+		format('woff'),
+		url('hds-theme/fuentes/open_sans/opensans-bolditalic-webfont.ttf')
+		format('truetype'),
+		url('hds-theme/fuentes/open_sans/opensans-bolditalic-webfont.svg#open_sansbold_italic')
+		format('svg');
+}
+
+@font-face {
+	font-family: 'OpenSansSemiBold';
+	src: url('hds-theme/fuentes/open_sans/opensans-semibold-webfont.eot');
+	src:
+		url('hds-theme/fuentes/open_sans/opensans-semibold-webfont.eot?#iefix')
+		format('embedded-opentype'),
+		url('hds-theme/fuentes/open_sans/opensans-semibold-webfont.woff')
+		format('woff'),
+		url('hds-theme/fuentes/open_sans/opensans-semibold-webfont.ttf')
+		format('truetype'),
+		url('hds-theme/fuentes/open_sans/opensans-semibold-webfont.svg#open_sans_semiboldregular')
+		format('svg');
+}
+
+@font-face {
+	font-family: 'OpenSansBold';
+	src: url('hds-theme/fuentes/open_sans/opensans-bold-webfont.eot');
+	src: url('hds-theme/fuentes/open_sans/opensans-bold-webfont.eot?#iefix')
+		format('embedded-opentype'),
+		url('hds-theme/fuentes/open_sans/opensans-bold-webfont.woff')
+		format('woff'),
+		url('hds-theme/fuentes/open_sans/opensans-bold-webfont.ttf')
+		format('truetype'),
+		url('hds-theme/fuentes/open_sans/opensans-bold-webfont.svg#open_sansbold')
+		format('svg');
+}
+
+@font-face {
+	font-family: 'Open Sans';
+	src: url('hds-theme/fuentes/open_sans/opensans-regular-webfont.eot');
+	src:
+		url('hds-theme/fuentes/open_sans/opensans-regular-webfont.eot?#iefix')
+		format('embedded-opentype'),
+		url('hds-theme/fuentes/open_sans/opensans-regular-webfont.woff')
+		format('woff'),
+		url('hds-theme/fuentes/open_sans/opensans-regular-webfont.ttf')
+		format('truetype'),
+		url('hds-theme/fuentes/open_sans/opensans-regular-webfont.svg#open_sansregular')
+		format('svg');
+}
+
+/*
+@font-face {
+    font-family: 'GentiumBasic';
+    src: url('hds-theme/fuentes/gentium_basic/genbasb-webfont.eot');
+    src: url('hds-theme/fuentes/gentium_basic/genbasb-webfont.eot?#iefix') format('embedded-opentype'),
+         url('hds-theme/fuentes/gentium_basic/genbasb-webfont.woff') format('woff'),
+         url('hds-theme/fuentes/gentium_basic/genbasb-webfont.ttf') format('truetype'),
+         url('hds-theme/fuentes/gentium_basic/genbasb-webfont.svg#gentium_basicbold') format('svg');
+}
+
+@font-face {
+    font-family: 'Gentium Basic';
+    src: url('hds-theme/fuentes/gentium_basic/genbasbi-webfont.eot');
+    src: url('hds-theme/fuentes/gentium_basic/genbasbi-webfont.eot?#iefix') format('embedded-opentype'),
+         url('hds-theme/fuentes/gentium_basic/genbasbi-webfont.woff') format('woff'),
+         url('hds-theme/fuentes/gentium_basic/genbasbi-webfont.ttf') format('truetype'),
+         url('hds-theme/fuentes/gentium_basic/genbasbi-webfont.svg#gentium_basicbold_italic') format('svg');
+    font-weight: bold;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Gentium Basic';
+    src: url('hds-theme/fuentes/gentium_basic/genbasi-webfont.eot');
+    src: url('hds-theme/fuentes/gentium_basic/genbasi-webfont.eot?#iefix') format('embedded-opentype'),
+         url('hds-theme/fuentes/gentium_basic/genbasi-webfont.woff') format('woff'),
+         url('hds-theme/fuentes/gentium_basic/genbasi-webfont.ttf') format('truetype'),
+         url('hds-theme/fuentes/gentium_basic/genbasi-webfont.svg#gentium_basicitalic') format('svg');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Gentium Basic';
+    src: url('hds-theme/fuentes/gentium_basic/genbasr-webfont.eot');
+    src: url('hds-theme/fuentes/gentium_basic/genbasr-webfont.eot?#iefix') format('embedded-opentype'),
+         url('hds-theme/fuentes/gentium_basic/genbasr-webfont.woff') format('woff'),
+         url('hds-theme/fuentes/gentium_basic/genbasr-webfont.ttf') format('truetype'),
+         url('hds-theme/fuentes/gentium_basic/genbasr-webfont.svg#gentium_basicregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Gentium Basic';
+    src: url('hds-theme/fuentes/gentium_basic/genbkbasb-webfont.eot');
+    src: url('hds-theme/fuentes/gentium_basic/genbkbasb-webfont.eot?#iefix') format('embedded-opentype'),
+         url('hds-theme/fuentes/gentium_basic/genbkbasb-webfont.woff') format('woff'),
+         url('hds-theme/fuentes/gentium_basic/genbkbasb-webfont.ttf') format('truetype'),
+         url('hds-theme/fuentes/gentium_basic/genbkbasb-webfont.svg#gentium_book_basicbold') format('svg');
+    font-weight: 800;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Gentium Basic';
+    src: url('hds-theme/fuentes/gentium_basic/genbkbasbi-webfont.eot');
+    src: url('hds-theme/fuentes/gentium_basic/genbkbasbi-webfont.eot?#iefix') format('embedded-opentype'),
+         url('hds-theme/fuentes/gentium_basic/genbkbasbi-webfont.woff') format('woff'),
+         url('hds-theme/fuentes/gentium_basic/genbkbasbi-webfont.ttf') format('truetype'),
+         url('hds-theme/fuentes/gentium_basic/genbkbasbi-webfont.svg#gentium_book_basicbold_italic') format('svg');
+    font-weight: 800;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Gentium Basic';
+    src: url('hds-theme/fuentes/gentium_basic/genbkbasi-webfont.eot');
+    src: url('hds-theme/fuentes/gentium_basic/genbkbasi-webfont.eot?#iefix') format('embedded-opentype'),
+         url('hds-theme/fuentes/gentium_basic/genbkbasi-webfont.woff') format('woff'),
+         url('hds-theme/fuentes/gentium_basic/genbkbasi-webfont.ttf') format('truetype'),
+         url('hds-theme/fuentes/gentium_basic/genbkbasi-webfont.svg#gentium_book_basicitalic') format('svg');
+    font-weight: 600;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Gentium Basic';
+    src: url('hds-theme/fuentes/gentium_basic/genbkbasr-webfont.eot');
+    src: url('hds-theme/fuentes/gentium_basic/genbkbasr-webfont.eot?#iefix') format('embedded-opentype'),
+         url('hds-theme/fuentes/gentium_basic/genbkbasr-webfont.woff') format('woff'),
+         url('hds-theme/fuentes/gentium_basic/genbkbasr-webfont.ttf') format('truetype'),
+         url('hds-theme/fuentes/gentium_basic/genbkbasr-webfont.svg#gentium_book_basicregular') format('svg');
+    font-weight: 600;
+    font-style: normal;
+
+}*/

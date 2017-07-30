@@ -1,0 +1,106 @@
+/* CSS DOCUMENT */
+.ui-paginator .ui-paginator-rpp-options {
+	color: #282828;
+}
+
+.circulo {
+	height: 30px;
+	border-radius: 50%;
+	width: 30px;
+}
+
+.circulo.verde {
+	background-color: green;
+}
+
+.circulo.amarillo {
+	background-color: yellow;
+}
+
+.circulo.rojo {
+	background-color: red;
+}
+
+.ui-widget-content .pnlgIncluir td {
+	vertical-align: top !important;
+}
+
+.ui-state-disabled {
+	background-color: gray;
+}
+
+.ui-dialog.dialogos .ui-dialog-titlebar .ui-dialog-title {
+	display: block !important;
+	margin: auto !important;
+	width: 95% !important;
+	text-align: center;
+}
+
+/*
+.ui-datatable{
+	max-width:800px;
+}
+*/
+.ui-message-error {
+	max-width: 130px !important;
+	margin: 0 !important;
+}
+
+.myMessage .ui-message-error {
+	max-width: 144px !important;
+	margin-left: 52px !important;
+}
+
+.campoRequerido:after {
+	content: '*';
+	color: orangered !important;
+	margin-left: 1px;
+}
+
+.customMsg .ui-message-error {
+	max-width: 144px !important;
+	margin-left: 49px !important
+}
+
+.myMessage2 .ui-message-error {
+	max-width: 144px !important;
+	left: 351px;
+	position: absolute;
+}
+
+.mensajeCrear .ui-message-error {
+	margin-left: 97px !important;
+	max-width: 144px !important;
+}
+
+.message3 .ui-message-error {
+	max-width: 144px !important;
+}
+
+.ui-fileupload .ui-button-text:hover {
+	cursor: pointer;
+}
+
+.negritas {
+	font-weight: bold;
+}
+
+.negritas>div {
+	font-weight: bold;
+}
+
+.large {
+	width: 70%;
+}
+
+.medium {
+	width: 30% !important;
+}
+
+.botonDerecha {
+	float: right;
+}
+
+.clear {
+	clear: both;
+}

@@ -1,0 +1,107 @@
+#top {
+	position: relative;
+	color: #BDBDBD;
+	padding: 3.5px;
+	/*margin: 0px 0px 50px 0px;*/
+	height: 20px;
+	/*background: -webkit-linear-gradient(#045FB4, #E6E6E6);
+	background: -moz-linear-gradient(#045FB4, #E6E6E6);
+	background: -o-linear-gradient(#045FB4, #E6E6E6);
+	font-size: 1.2em;
+	font-weight: bold;*/
+	background: #333333;
+	border-width: 1px;
+}
+
+#bottom {
+	position: relative;
+	padding: 16px;
+	margin: 10px 0px 0px 0px;
+	color: #BDBDBD;
+	text-align: center;
+	border-style: solid;
+	border-width: 1px;
+	border-radius: 0px;
+	border-color: transparent;
+	background-color: #333333;
+}
+
+#left {
+	float: left;
+	/*padding: 5px;*/
+	width: 180px;
+	border: none;
+	min-height: 551px;
+}
+
+.panelScroll {
+	max-height: 550px;
+	overflow: auto;
+}
+
+.left_content {
+	min-height: 500px;
+	border-radius: 4px;
+	border-color: silver;
+	padding: 30px;
+	overflow-x: auto;
+	background: none repeat scroll 0 0 white;
+	border: 1px solid steelblue;
+	border-radius: 4px 4px 4px 4px;
+	box-shadow: 0 0 2px #B8B8C3;
+	position: relative;
+}
+
+#top a:link,#top a:visited {
+	color: #CACCCE;
+	text-decoration: none;
+	font-size: 13px;
+}
+
+#top a:link:hover,#top a:visited:hover {
+	text-decoration: none;
+	background-color: gray !important;
+	padding: 2px;
+}
+
+.titulo_principal {
+	background-color: #0071BC;
+	border-radius: 4px 4px 4px 4px;
+	color: white;
+	height: 1.4em;
+	list-style: none outside none;
+	margin: 0 0 20px;
+	padding: 2px 15px;
+	text-shadow: 1px 1px 1px #36369A;
+	font-family: "OpenSansSemiBold"
+}
+
+.titulo_principal:empty {
+	background-color: transparent;
+}
+
+.panelContenido {
+	border-width: 0px !important;
+}
+
+.ui-menu h3 {
+	font-family: "OpenSansBold";
+	text-shadow: 1px 1px 1px #36369A;
+}
+
+v.ui-state-default,.ui-widget-content .ui-state-default,.ui-widget-header .ui-state-default
+	{
+	font-weight: normal !important;
+}
+
+.ui-wizard-step-title {
+	font-size: 13px !important;
+}
+
+.ui-wizard-step-titles {
+	margin-bottom: 20px;
+}
+
+.ui-tabs-selected>a {
+	color: #2E3436 !important;
+}

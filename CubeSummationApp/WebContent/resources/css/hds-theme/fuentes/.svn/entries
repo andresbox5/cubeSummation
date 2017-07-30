@@ -1,0 +1,34 @@
+10
+
+dir
+1873
+http://svn.saludhds.com:8888/svn/gestion-reglas/trunk/gestion-reglas-war/src/main/webapp/resources/css/hds-theme/fuentes
+http://svn.saludhds.com:8888/svn/gestion-reglas
+
+
+
+2013-10-24T13:01:19.659946Z
+12
+gustavo.leyton
+has-props
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+76de12b3-ddc9-4c96-9a11-2d7b8065d525
+
+gentium_basic
+dir
+
+open_sans
+dir
+

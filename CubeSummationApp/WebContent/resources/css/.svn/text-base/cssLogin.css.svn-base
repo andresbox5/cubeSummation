@@ -1,0 +1,213 @@
+body {
+	background-color: #333333;
+	font-size: 12px;
+	font-family: Verdana, "Verdana CE", Arial, "Arial CE",
+		"Lucida Grande CE", lucida, "Helvetica CE", sans-serif;
+	color: #000000;
+	margin: 10px;
+}
+
+.contenido {
+	margin: 100px 10px 10px 10px;
+}
+
+.base {
+	width: 80%;
+	height: 90%;
+	left: 10%;
+	margin: auto;
+	position: absolute;
+	right: 10%;
+	top: 3%;
+	width: 80%;
+}
+
+.logo_hds {
+	/*background-image: url("logo_hds_inicio.png.xhtml?ln=image");*/
+	height: 64px;
+	left: 0;
+	position: absolute;
+	top: 0;
+	width: 127px;
+}
+
+.login_back {
+	bottom: 0;
+	height: 86%;
+	position: absolute;
+	width: 100%;
+	background-color: #0071BC;
+	border: 1px solid #fff;
+}
+
+.bkgd_base_login {
+	/*background-image: url("logo_hds_inicio.jpg.xhtml?ln=image");*/
+	background-position: center center;
+	background-repeat: no-repeat;
+	bottom: 0;
+	height: 100%;
+	left: 5%;
+	position: absolute;
+	top: 0;
+	width: 45%;
+}
+
+.logo_hds_inicio {
+	background-image: url("logo_main.png.xhtml?ln=image");
+	background-position: center center;
+	background-repeat: no-repeat;
+	bottom: 0;
+	height: 100%;
+	left: 5%;
+	position: absolute;
+	top: 0;
+	width: 45%;
+}
+
+.division_login {
+	background-image: url("division_login.png.xhtml?ln=image");
+	background-position: center center;
+	background-repeat: no-repeat;
+	bottom: 0;
+	height: 100%;
+	left: 49%;
+	position: absolute;
+	right: 49%;
+	top: 0;
+	width: 2%;
+}
+
+.base_sesion {
+	bottom: 0;
+	height: 100%;
+	position: absolute;
+	right: 5%;
+	top: 0;
+	width: 45%;
+}
+
+.iniciar_sesion {
+	background-image: url("btn_login.png.xhtml?ln=image");
+}
+
+.titulo_principal {
+	background-repeat: no-repeat;
+	color: #FFFFFF;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 20px;
+	font-weight: bold;
+	height: 37px;
+	left: 10%;
+	position: absolute;
+	text-indent: 45px;
+	top: 25%;
+	width: 280px;
+}
+
+.titulo_principal.contrasenia {
+	top: 10%;
+}
+
+.campo_usuario {
+	color: #FFFFFF;
+	height: 20px;
+	left: 10%;
+	position: absolute;
+	top: 40%;
+	width: 284px;
+}
+
+.campo_usuario.contrasenia {
+	top: 19%;
+}
+
+.campo_password {
+	height: 20px;
+	left: 10%;
+	position: absolute;
+	top: 53%;
+	width: 284px;
+	color: #FFFFFF;
+}
+
+.campo_password.contrasenia {
+	top: 31%;
+}
+
+.campo_capcha {
+	color: #FFFFFF;
+	height: 20px;
+	left: 10%;
+	position: absolute;
+	top: 43%;
+	width: 250px;
+}
+
+.btn_iniciar.contrasenia {
+	top: 80%;
+}
+
+.btn_iniciar {
+	color: #FFFFFF;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 13px;
+	height: 20px;
+	left: 10%;
+	position: absolute;
+	text-align: center;
+	top: 66%;
+	width: 188px;
+}
+
+.base_sesion {
+	bottom: 0;
+	height: 100%;
+	position: absolute;
+	right: 5%;
+	top: 0;
+	width: 45%;
+}
+
+input,button {
+	background: #3FA9F5 !important;
+	border: medium none !important;
+	color: #FFFFFF !important;
+	width: 100%;
+	border-radius: 0px !important;
+	box-shadow: none !important;
+	text-shadow: none !important;
+	padding: 1px !important;
+}
+
+.boton-reload .ui-icon {
+	background: auto !important;
+}
+
+button {
+	width: 40%;
+}
+
+#recaptcha_response_field {
+	background: #fff !important;
+	border: 1px solid #ccc !important;
+	color: black !important;
+}
+
+.ui-button-text {
+	padding: 0px !important;
+}
+
+.ui-icon { /*background: none !important;*/
+	
+}
+
+a,a:link {
+	color: #FFFFFF !important;
+	font-style: italic;
+	text-decoration: none;
+}
+
+.ui-messages-error,.ui-message-error {
+	width: 240px;
+	margin: 0px;
+}

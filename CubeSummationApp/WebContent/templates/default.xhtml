@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:c="http://java.sun.com/jsp/jstl/core"
+	xmlns:f="http://java.sun.com/jsf/core">
+
+<h:head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<h:outputStylesheet name="jquery-ui-1.10.0.custom.css"
+		library="css/hds-theme" />
+	<h:outputStylesheet name="jquery-ui-1.10.0.custom.min.css"
+		library="css/hds-theme" />
+
+	<h:outputStylesheet name="default.css" library="css" />
+	<h:outputStylesheet name="cssLayout.css" library="css" />
+
+	<link rel="stylesheet" type="text/css"
+		href="#{facesContext.externalContext.requestContextPath}/resources/css/hds-font.css" />
+	<link rel="stylesheet" type="text/css"
+		href="#{facesContext.externalContext.requestContextPath}/resources/css/hds.css" />
+	<h:outputScript name="menu.js" library="js" />
+
+	<title><ui:insert name="nombre_pagina">Página sin nombre</ui:insert>
+		- <ui:insert name="nombre_modulo">Módulo sin nombre</ui:insert> - <ui:insert
+			name="pageTittle" />VPM</title>
+	<ui:insert name="pageHead" />
+
+	<style>
+.ui-menu .ui-icon {
+	position: relative;
+}
+
+.breadcrumb {
+	border-bottom-style: solid;
+	border-bottom-width: 4px;
+	list-style: none outside none;
+	margin-top: 5px;
+	padding: 0 15px;
+	border-bottom-color: #D3D7CF;
+	color: #2E3436;
+	font-family: "OpenSansSemiBold";
+}
+
+.breadcrumb>li {
+	display: inline-block;
+}
+
+.breadcrumb>li:after {
+	content: " ➞ ";
+	margin-left: 6px;
+	margin-right: 5px;
+}
+
+.breadcrumb>li:last-child:after {
+	content: " ";
+}
+
+.breadcrumb>li:last-child {
+	font-size: 1.1em;
+}
+
+.controlSession-username {
+	border-right: 1px dotted white;
+	margin-right: 10px;
+	padding-right: 10px;
+}
+
+.controlSession-cerrar,.controlSession-cerrar:hover {
+	padding: 0 5px !important;
+}
+
+.controlSession-cerrar:hover {
+	background: gray;
+	color: white !important;
+}
+</style>
+
+</h:head>
+
+<h:body>
+  
+
+	<div id="body">
+		<div>
+			<ul class="mainMenuBar">
+				
+			</ul>
+			<ul class="breadcrumb">
+				<li><ui:insert name="nombre_modulo">Módulo sin nombre</ui:insert>
+				</li>
+				<li><ui:insert name="nombre_pagina">Página sin nombre</ui:insert>
+				</li>
+			</ul>
+
+			<div id="content" class="">
+				<ui:insert name="marcoSesion"></ui:insert>
+				<ui:insert name="content" />
+				
+				<p:ajaxStatus oncomplete="validacionCampos()"></p:ajaxStatus>
+			</div>
+		</div>
+
+		<p:ajaxStatus
+			style="width:64px;height:64px;position:fixed;right:5px;bottom:5px; z-index:1200;">
+			<f:facet name="start">
+
+			</f:facet>
+
+			<f:facet name="complete">
+				<h:outputText value="" />
+			</f:facet>
+		</p:ajaxStatus>
+	</div>
+
+	<div id="bottom">VPM</div>
+
+
+	<h:outputScript name="hds.alphanumeric-1.0.js" library="js" />
+</h:body>
+
+</html>

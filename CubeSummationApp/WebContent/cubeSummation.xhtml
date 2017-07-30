@@ -1,0 +1,157 @@
+<!DOCTYPE composition PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui" template="/templates/default.xhtml">
+
+
+	<ui:define name="content">
+		<h:form id="loginForm">
+			<p:growl id="msgCubeSummation" showDetail="true" globalOnly="true" life="5000" sticky="false"  />
+			<p:panel>
+				<h:panelGroup>
+				<table style="aling: center">
+					<tr>
+						<td width="250"><p:outputLabel
+								value="Número de casos de prueba (T): " /></td>
+						<td><p:inputMask id="idNumeroCasosPrueba" value="#{cubeSummationMB.numeroCasosPrueba}"
+								maxlength="2" mask="9?9" style="width: 40 "  >
+								
+								<p:ajax  event="blur" listener="#{cubeSummationMB.validarNumeroCasosPrueba}"
+								 update="idCasosPrueba :loginForm:msgCubeSummation" process="idNumeroCasosPrueba @this" />
+								 </p:inputMask>
+								</td>
+					</tr>
+					<tr>
+						<td width="250"><p:outputLabel
+								value="Caso de prueba a ejecutar: " /></td>
+						<td><p:selectOneMenu id="idCasosPrueba" value="#{cubeSummationMB.casoPrueba}"
+							disabled="#{cubeSummationMB.habilitarCasosPrueba}">
+								<f:selectItem itemLabel="Seleccione" />
+								<f:selectItems value="#{cubeSummationMB.listaCasosPrueba}" var="caso"
+								itemLabel="#{caso}" itemValue="#{caso}"  />
+								<p:ajax event="change" listener="#{cubeSummationMB.habilitarPrueba}"
+								update="idDimensionMatriz idCantOperaciones idTipoOperacion" 
+								process="idCasosPrueba @this" />
+							</p:selectOneMenu></td>
+					</tr>
+
+					<tr>
+						<td width="250"><p:outputLabel
+								value="Dimensión de la matriz 3-D (N): " /></td>
+						<td><p:inputMask id="idDimensionMatriz" value="#{cubeSummationMB.cubeSummationDTO.dimensionMatriz}"
+						 disabled="#{cubeSummationMB.habilitarOperacion}" mask="9?99" style="width: 40 " 
+								maxlength="3" >
+								<p:ajax  event="blur" listener="#{cubeSummationMB.validarDimension}"
+								 update=":loginForm:msgCubeSummation :loginForm:idCantOperaciones @this" process="@all @this :loginForm:idDimensionMatriz" />
+								 </p:inputMask>
+								</td>
+					</tr>
+
+					<tr>
+						<td width="250"><p:outputLabel
+								value="Número de operaciones a ejecutar (M): " /></td>
+						<td><p:inputMask id="idCantOperaciones" value="#{cubeSummationMB.cubeSummationDTO.numeroOperaciones}" 
+						disabled="#{!cubeSummationMB.habilitaCantidadOperaciones}" mask="9?999" style="width: 40 " 
+								maxlength="4" >
+								<p:ajax  event="blur" listener="#{cubeSummationMB.validarCantidadOperaciones}" 
+								 update="idGuardarOperacion :loginForm:idTipoOperacion @this :loginForm:msgCubeSummation" process="@this"  />
+								 </p:inputMask>
+								</td>
+					</tr>
+
+					<tr>
+						<td width="250"><p:outputLabel
+								value="Tipo operación a ejecutar: " /></td>
+						<td width="10"><p:selectOneMenu id="idTipoOperacion" styleClass="sidTipoOperacion" value="#{cubeSummationMB.tipoOperacion}"
+						       disabled="#{!cubeSummationMB.habilitaTipoOperacion}">
+								<f:selectItem itemLabel="Seleccione" />
+								<f:selectItems value="#{cubeSummationMB.listaTipoOperacion}" var="tipoOperacion"
+								itemLabel="#{tipoOperacion}" itemValue="#{tipoOperacion}"  />
+								<p:ajax event="change" listener="#{cubeSummationMB.validarTipoOperacion}"
+								update="u1 u2 u3 u4 q1 q2 q3 q4 q5 q6 o1" 
+								process="idTipoOperacion " />
+							</p:selectOneMenu></td>
+					</tr>
+
+					<tr >
+						<td width="250"><p:outputLabel value="Valores: " /></td>
+						<h:panelGroup styleClass="panelDatos">
+						<td width="10">
+								
+								<p:inputText id="u1" styleClass="su1" value="#{cubeSummationMB.operacion.x}"
+								disabled="#{!cubeSummationMB.habilitarUpdate}" placeholder="x" maxlength="3"
+								style="width: 40 " /> 
+								<p:inputText id="u2" styleClass="su2" disabled="#{!cubeSummationMB.habilitarUpdate}" value="#{cubeSummationMB.operacion.y}"
+								placeholder="y" style="width: 40 " maxlength="3" /> 
+								<p:inputText id="u3" styleClass="su3" value="#{cubeSummationMB.operacion.z}" maxlength="3"
+								disabled="#{!cubeSummationMB.habilitarUpdate}" placeholder="z" style="width: 40 " /> 
+								<p:inputText id="u4" styleClass="su4" value="#{cubeSummationMB.operacion.w}" 
+								disabled="#{!cubeSummationMB.habilitarUpdate}" placeholder="w" style="width: 100 " /> 
+								<p:inputText id="q1" styleClass="sq1" value="#{cubeSummationMB.operacion.x1}" maxlength="3"
+								disabled="#{!cubeSummationMB.habilitarQuery}" placeholder="x1" style="width: 40 " /> 
+								<p:inputText id="q2" styleClass="sq2" value="#{cubeSummationMB.operacion.y1}" maxlength="3"
+								disabled="#{!cubeSummationMB.habilitarQuery}" placeholder="y1" style="width: 40 " /> 
+								<p:inputText id="q3" styleClass="sq3" value="#{cubeSummationMB.operacion.z1}" maxlength="3"
+								disabled="#{!cubeSummationMB.habilitarQuery}" placeholder="z1" style="width: 40 " /> 
+								<p:inputText id="q4" styleClass="sq4" value="#{cubeSummationMB.operacion.x2}" maxlength="3"
+								disabled="#{!cubeSummationMB.habilitarQuery}" placeholder="x2" style="width: 40 " /> 
+								<p:inputText id="q5" styleClass="sq5" value="#{cubeSummationMB.operacion.y2}" maxlength="3"
+								disabled="#{!cubeSummationMB.habilitarQuery}" placeholder="y2" style="width: 40 " /> 
+								<p:inputText id="q6" styleClass="sq6" value="#{cubeSummationMB.operacion.z2}" maxlength="3"
+								disabled="#{!cubeSummationMB.habilitarQuery}" placeholder="z2" style="width: 40 " /> 
+								<p:inputText id="o1" styleClass="so1" 
+								disabled="true" value="Operacion #{cubeSummationMB.cubeSummationDTO.operacionEjecutada}" style="width: 90 " /></td>	
+								</h:panelGroup>					
+					</tr>
+
+				</table>
+				<h:panelGroup>
+					<p:commandButton id="idGuardarOperacion" value="Guardar operacion" actionListener="#{cubeSummationMB.guardarOperacion}" 
+					disabled="#{!cubeSummationMB.habilitarBotonGuardarOperacion}" process="@all" 
+					update=":loginForm:u1 :loginForm:u2 :loginForm:u3 :loginForm:u4 :loginForm:q1 :loginForm:q2 :loginForm:q3 :loginForm:q4 :loginForm:q5
+					:loginForm:q6 :loginForm:o1 :loginForm:idGuardarCasoPrueba :loginForm:idTipoOperacion @this :loginForm:msgCubeSummation
+					:loginForm:idDimensionMatriz :loginForm:idCantOperaciones :loginForm:idEntrada" >
+					</p:commandButton>
+					<p:commandButton id="idGuardarCasoPrueba" styleClass="sidGuardarCasoPrueba" value="Guardar Caso de prueba" process="@all" 
+					update=":loginForm:idCasosPrueba :loginForm:idTipoOperacion :loginForm:idDimensionMatriz :loginForm:idCantOperaciones :loginForm:msgCubeSummation @this :loginForm:idBotonObtenerResultado" 
+					disabled="#{!cubeSummationMB.habilitarBotonGuardarCasoPrueba}" actionListener="#{cubeSummationMB.guardarCasoPrueba}"  />
+					<p:commandButton id="idBotonObtenerResultado" value="Obtener resultado" disabled="#{!cubeSummationMB.habilitarObtenerResultado}"
+					actionListener="#{cubeSummationMB.obtenerResultado}" process="@all" update=":loginForm:msgCubeSummation :loginForm:idRespuesta" />
+					<p:commandButton id="idBotonlimpiar" value="Limpiar" 
+					actionListener="#{cubeSummationMB.limpiar}" process="@all" update=":loginForm:u1 :loginForm:u2 :loginForm:u3 :loginForm:u4 :loginForm:q1 :loginForm:q2 :loginForm:q3 :loginForm:q4 :loginForm:q5
+					:loginForm:q6 :loginForm:o1 :loginForm:idGuardarCasoPrueba :loginForm:idTipoOperacion @this :loginForm:msgCubeSummation :loginForm:idNumeroCasosPrueba
+					:loginForm:idDimensionMatriz :loginForm:idCantOperaciones :loginForm:idEntrada :loginForm:idRespuesta :loginForm:idEntrada :loginForm:idCasosPrueba :loginForm:idBotonObtenerResultado" />
+				</h:panelGroup>
+				
+				<table>
+					<tr>
+						<td>
+						<h:panelGrid>
+						<p:outputLabel
+								value="Entrada: " />
+						<p:inputTextarea id="idEntrada" rows="15" cols="60" value="#{cubeSummationMB.informacionEntrada}"
+								 maxlength="10" 
+								autoResize="false" /> 
+						</h:panelGrid>		
+								</td>
+						<td>
+						<h:panelGrid>
+						<p:outputLabel
+								value="Salida: " />
+						<p:inputTextarea id="idRespuesta" rows="15" cols="60" value="#{cubeSummationMB.cubeSummationDTO.respuestaCasosPrueba}"
+								 maxlength="10" 
+								autoResize="false" /> 
+						</h:panelGrid>		
+								</td>
+					</tr>
+				</table>
+				</h:panelGroup>
+			</p:panel>
+		</h:form>
+
+	</ui:define>
+
+</ui:composition>
